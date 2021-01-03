@@ -1,0 +1,119 @@
+---
+layout: default
+title: The Justin &amp; Babs Fundraiser!
+messages:
+  - person: hcjustin
+    body: >-
+      Hi chat! We're moving to {state} soon and we need some help!
+  - person: unrulybabs
+    body: >-
+      Yeah, but also we want to make things fun for you!
+  - person: hcjustin
+    body: >-
+      You'll be able to donate money towards goals, listed below, and if we get enough for that goal we'll do that task on stream!
+  - person: unrulybabs
+    body: >-
+      You can only do this for {period of time} when you donate to either <a title="" href="https://twitch.tv/hcjustin">twitch.tv/hcjustin</a> or <a title="" href="https://twitch.tv/unrulybabs">twitch.tv/unrulybabs</a>.
+  - person: hcjustin
+    body: >-
+      Make sure to include the hashtag for the goal you want to contribute towards!
+  - person: unrulybabs
+    body: >-
+      This helps us out a lot and we sincerely appreciate it.
+goals:
+  - hashtag: ck3
+    description: >-
+      An example description
+    type: bits
+    current: 0
+    max: 100_00
+  - hashtag: animalcrossing
+    description: >-
+      An example description
+    type: subs
+    current: 5
+    max: 15
+  - hashtag: polarexpress
+    description: >-
+      An example description
+    type: bits
+    current: 20_00
+    max: 25_00
+  - hashtag: packingstream
+    description: >-
+      An example description
+    type: bits
+    current: 0
+    max: 5000_00
+  - hashtag: cookingstream
+    description: >-
+      An example description
+    type: bits
+    current: 50_00
+    max: 50_00
+    tag: goalb
+  - hashtag: setupstream
+    description: >-
+      An example description
+    type: bits
+    current: 0
+    max: 25_00
+  - hashtag: fragworld
+    description: >-
+      An example description
+    type: subs
+    current: 0
+    max: 25
+  - hashtag: spelunky2
+    description: >-
+      An example description
+    type: bits
+    current: 0
+    max: 25_00
+  - hashtag: control
+    description: >-
+      An example description
+    type: bits
+    current: 0
+    max: 25_00
+---
+<header>
+  <h1>The hcjustin and unrulybabs moving fundraiser</h1>
+</header>
+<section id="introduction">
+{% for message in page.messages %}
+  <section class="message {{message.person}}">
+    <picture id="{{message.person}}">
+      <img title="{{message.person}}" alt="{{message.person}} avatar" src="images/{{message.person}}.png">
+    </picture>
+    <p>
+      {{message.body}}
+    </p>
+  </section>
+{% endfor %}
+</section>
+
+<section id="goals">
+{% for goal in page.goals %}
+  {% assign percentage = goal.current | times: 1.0 | divided_by: goal.max %}
+  <section class="goal {% if percentage == 1.0 %}finished{% elsif percentage >= 0.8 %}finishing{% endif %}">
+    <picture class="banner">
+      <img title="{{goal.hashtag}}" alt="an image representing the {{goal.hashtag}} goal" src="images/{{goal.hashtag}}.jpg" onerror="this.src = 'images/default.jpg';" width="100%" height="100%">
+    </picture>
+    <header class="hashtag">
+      <h2>#{{goal.hashtag}}</h2>
+    </header>
+    <p class="description">
+      {{goal.description}}
+    </p>
+    <section class="status">
+      <p>{{goal.current}} / {{goal.max}} <img title="{{goal.type}}" alt="{{goal.type}}" src="images/{{goal.type}}.png"></p>
+      <progress value="{{goal.current}}" max="{{goal.max}}"></progress>
+    </section>
+  </section>
+{% endfor %}
+</section>
+
+<footer>
+
+</footer>
