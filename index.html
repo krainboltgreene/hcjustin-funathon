@@ -4,75 +4,75 @@ title: The Justin &amp; Babs Fundraiser!
 messages:
   - person: hcjustin
     body: >-
-      Hi chat! We're moving to {state} soon and we need some help!
+      "██ ████! ██'██ ██████ ██ █████ ████ ███ ██ ████ ████ ████!"
   - person: unrulybabs
     body: >-
-      Yeah, but also we want to make things fun for you!
+      "████, ███ ████ ██ ████ ██ ████ ██████ ███ ███ ███!"
   - person: hcjustin
     body: >-
-      You'll be able to donate money towards goals, listed below, and if we get enough for that goal we'll do that task on stream!
+      "███'██ ██ ████ ██ ██████ █████ ███████ █████, ██████ █████, ███ ██ ██ ███ ██████ ███ ████ ████ ██'██ ██ ████ ████ ██ ██████!"
   - person: unrulybabs
     body: >-
-      You can only do this for {period of time} when you donate to either <a title="" href="https://twitch.tv/hcjustin">twitch.tv/hcjustin</a> or <a title="" href="https://twitch.tv/unrulybabs">twitch.tv/unrulybabs</a>.
+      '███ ███ ████ ██ ████ ███ ██████ ██ ████ ████ ███ ██████ ██ ██████ <a title="" href="https://twitch.tv/hcjustin">twitch.tv/hcjustin</a> ██ <a title="" href="https://twitch.tv/unrulybabs">twitch.tv/unrulybabs</a>.'
   - person: hcjustin
     body: >-
-      Make sure to include the hashtag for the goal you want to contribute towards!
+      "████ ████ ██ ███████ ███ ███████ ███ ███ ████ ███ ████ ██ ██████████ ███████!"
   - person: unrulybabs
     body: >-
-      This helps us out a lot and we sincerely appreciate it.
+      "████ █████ ██ ███ █ ███ ███ ██ █████████ ██████████ ██."
 goals:
   - hashtag: ck3
     description: >-
-      An example description
+      Proident esse esse Lorem aliquip eu. Anim aliquip magna eu laboris eiusmod Lorem non reprehenderit veniam et. Ipsum magna fugiat tempor ullamco aute voluptate pariatur.
     type: bits
     current: 0
     max: 100_00
   - hashtag: animalcrossing
     description: >-
-      An example description
+      Pariatur nisi elit culpa eiusmod ipsum velit qui incididunt ex. Irure sit non elit laborum fugiat laboris aute aliquip id exercitation ullamco dolor. Ex laboris ad sit ullamco aliqua. Enim officia commodo pariatur et sint qui elit veniam consectetur. Dolor magna culpa non culpa sit consequat eu.
     type: subs
     current: 5
     max: 15
   - hashtag: polarexpress
     description: >-
-      An example description
+      Culpa reprehenderit cupidatat Lorem eiusmod enim aliqua do elit eiusmod aliquip anim nulla id reprehenderit. Exercitation ex irure fugiat voluptate. Incididunt ipsum do do excepteur aliquip nostrud aliquip. Ut fugiat Lorem irure dolor id dolor magna dolor ut consectetur elit nostrud ipsum. Veniam id aliqua officia esse id occaecat aliquip adipisicing elit.
     type: bits
     current: 20_00
     max: 25_00
   - hashtag: packingstream
     description: >-
-      An example description
+      Sit occaecat velit cupidatat quis nisi dolore elit amet dolore amet laborum fugiat. Lorem est non commodo qui nostrud sint tempor duis sit magna aute commodo nisi. Minim qui et nisi mollit ullamco occaecat anim et quis elit minim ad. Ad sunt do nostrud elit culpa incididunt velit. Incididunt minim elit sint cillum. Officia occaecat minim exercitation est officia incididunt. Amet ad ut duis sint qui.
     type: bits
     current: 0
     max: 5000_00
   - hashtag: cookingstream
     description: >-
-      An example description
+      Nisi cupidatat laborum consectetur Lorem ullamco est qui non ullamco. Aliqua minim cupidatat occaecat sit cupidatat esse in labore enim est minim culpa velit. Culpa mollit nisi veniam minim magna dolore Lorem aute aute mollit do. Occaecat ipsum incididunt ea commodo excepteur non culpa. Occaecat consectetur aute est sint velit. Eu cupidatat exercitation incididunt mollit quis amet ex duis reprehenderit exercitation ex id voluptate.
     type: bits
     current: 50_00
     max: 50_00
     tag: goalb
   - hashtag: setupstream
     description: >-
-      An example description
+      Irure occaecat anim proident officia incididunt non labore enim quis. Incididunt nisi ex cillum consequat aute aliqua amet eiusmod sunt adipisicing nulla. Lorem adipisicing tempor nostrud minim Lorem nulla quis consequat cillum. Aliqua ut Lorem velit nisi. Voluptate est sint officia nostrud dolor non nostrud in deserunt magna cupidatat pariatur. Commodo amet pariatur pariatur eu. Consequat enim ullamco et exercitation adipisicing ad et cillum exercitation.
     type: bits
     current: 0
     max: 25_00
   - hashtag: fragworld
     description: >-
-      An example description
+      Excepteur fugiat commodo mollit officia esse minim aute deserunt ea.
     type: subs
     current: 0
     max: 25
   - hashtag: spelunky2
     description: >-
-      An example description
+      Labore aliquip et fugiat non velit veniam proident est id nisi aliqua incididunt.
     type: bits
     current: 0
     max: 25_00
   - hashtag: control
     description: >-
-      An example description
+      Ullamco commodo magna in culpa nulla.
     type: bits
     current: 0
     max: 25_00
@@ -98,7 +98,7 @@ goals:
   {% assign percentage = goal.current | times: 1.0 | divided_by: goal.max %}
   <section class="goal {% if percentage == 1.0 %}finished{% elsif percentage >= 0.8 %}finishing{% endif %}">
     <picture class="banner">
-      <img title="{{goal.hashtag}}" alt="an image representing the {{goal.hashtag}} goal" src="images/{{goal.hashtag}}.jpg" onerror="this.src = 'images/default.jpg';" width="100%" height="100%">
+      <img title="{{goal.hashtag}}" alt="an image representing the {{goal.hashtag}} goal" src="images/{{goal.hashtag}}.jpg" onerror="this.src = 'images/default.jpg';" width="100%">
     </picture>
     <header class="hashtag">
       <h2>#{{goal.hashtag}}</h2>
