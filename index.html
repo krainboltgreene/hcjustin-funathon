@@ -94,10 +94,20 @@ goals:
 {% endfor %}
 </section>
 
+<section>
+  <p>Want to contribute? Just cheer or subscribe with the goal hashtag you want to contribute to!</p>
+  <picture>
+    <img alt="" src="">
+  </picture>
+  <picture>
+    <img alt="" src="">
+  </picture>
+</section>
+
 <section id="goals">
 {% for goal in page.goals %}
   {% assign percentage = goal.current | times: 1.0 | divided_by: goal.max %}
-  <section class="goal {% if percentage == 1.0 %}finished{% elsif percentage >= 0.8 %}finishing{% endif %}">
+  <section class="goal {% if percentage >= 0.75 and percentage != 1.0 %}animate__animated animate__pulse animate__slower animate__infinite{% endif %}">
     <picture class="banner">
       <img title="{{goal.hashtag}}" alt="an image representing the {{goal.hashtag}} goal" src="images/{{goal.hashtag}}.jpg" onerror="this.src = 'images/default.jpg';" width="100%">
     </picture>

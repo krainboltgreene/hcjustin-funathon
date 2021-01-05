@@ -88,12 +88,7 @@ body > header h1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content 1fr min-content;
-}
-#goals .goal.finishing .status {
-  border: 10px solid gold;
-}
-#goals .goal.finished .status {
-  border: 20px solid gold;
+  border: 1px solid hsla(0,0%,100%,.1);
 }
 #goals .goal .banner img {
   width: 100%;
